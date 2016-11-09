@@ -9,7 +9,7 @@ Version: 0.0.00
 */
 
 /*
-*  gwtb_admin_status_menu
+*  gwtb_admin_cpt_menu
 *
 *  This function adds a Custom Post Types UI section to view the status of addon settings.
 *
@@ -27,7 +27,7 @@ function gwtb_admin_cpt_menu(){
 add_action( 'admin_menu', 'gwtb_admin_cpt_menu', 3 );
 
 /*
-*  gwtb_admin_status_menu
+*  gwtb_admin_cpt_menu
 *
 *  This function adds a page layout for the gwtb_admin_cpt_menu function
 *
