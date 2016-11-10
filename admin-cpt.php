@@ -90,12 +90,12 @@ include(GWTB_PLUGIN_DIR . 'layout/header.php');
 			    		</div>
 
 			    		<div class="admin-checkbox">
-				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[archive]" id="archive<?php echo $index ?>" value="yes" <?php if($cpt['archive']){echo 'checked';} ?>  />
+				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[archive]" id="archive<?php echo $index ?>" value="true" <?php if($cpt['archive']){echo 'checked';} ?>  />
 				    		<label for="archive<?php echo $index ?>"  class="checkbox_label">Has Archive?</label>
 			    		</div>
 
 			    		<div class="admin-checkbox">
-				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[hierarchial]" id="hierarchial<?php echo $index ?>" value="yes" <?php if($cpt['hierarchial']){echo 'checked';} ?> />
+				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[hierarchial]" id="hierarchial<?php echo $index ?>" value="true" <?php if($cpt['hierarchial']){echo 'checked';} ?> />
 				    		<label for="hierarchial<?php echo $index ?>"  class="checkbox_label">Is Hierarchial?</label>
 			    		</div>
 					  </div>
@@ -103,37 +103,37 @@ include(GWTB_PLUGIN_DIR . 'layout/header.php');
 					  <div class="six columns text-center">
 			    			<h6 style="margin:0; margin-top:20px;">Supports</h6>
 			    		<div class="admin-checkbox">
-				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[title]" value="yes" id="title<?php echo $index ?>" <?php if($cpt['title']){echo 'checked';} ?>/>
+				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[title]" value="true" id="title<?php echo $index ?>" <?php if($cpt['title']){echo 'checked';} ?>/>
 				    		<label for="title<?php echo $index ?>" class="checkbox_label">Title</label><br>
 				    	</div>
 
 				    	<div class="admin-checkbox">
-				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[editor]" value="yes" id="editor<?php echo $index ?>" <?php if($cpt['editor']){echo 'checked';} ?>/>
+				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[editor]" value="true" id="editor<?php echo $index ?>" <?php if($cpt['editor']){echo 'checked';} ?>/>
 				    		<label for="editor<?php echo $index ?>" class="checkbox_label">Editor</label><br>
 				    	</div>
 
 				    	<div class="admin-checkbox">
-				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[author]" value="yes" id="author<?php echo $index ?>" <?php if($cpt['author']){echo 'checked';} ?>/>
+				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[author]" value="true" id="author<?php echo $index ?>" <?php if($cpt['author']){echo 'checked';} ?>/>
 				    		<label for="author<?php echo $index ?>" class="checkbox_label">Author</label><br>
 				    	</div>
 
 				    	<div class="admin-checkbox">	
-				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[thumbnail]" value="yes" id="thumbnail<?php echo $index ?>" <?php if($cpt['thumbnail']){echo 'checked';} ?>/>
+				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[thumbnail]" value="true" id="thumbnail<?php echo $index ?>" <?php if($cpt['thumbnail']){echo 'checked';} ?>/>
 				    		<label for="thumbnail<?php echo $index ?>" class="checkbox_label">Thubmnail</label><br>
 				    	</div>	
 
 				    	<div class="admin-checkbox">	
-				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[excerpt]" value="yes" id="excerpt<?php echo $index ?>" <?php if($cpt['excerpt']){echo 'checked';} ?>/>
+				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[excerpt]" value="true" id="excerpt<?php echo $index ?>" <?php if($cpt['excerpt']){echo 'checked';} ?>/>
 				    		<label for="excerpt<?php echo $index ?>" class="checkbox_label">Excerpt</label><br>
 				    	</div>
 
 				    	<div class="admin-checkbox">	
-				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[comments]" value="yes" id="comments<?php echo $index ?>" <?php if($cpt['comments']){echo 'checked';} ?>/>
+				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[comments]" value="true" id="comments<?php echo $index ?>" <?php if($cpt['comments']){echo 'checked';} ?>/>
 				    		<label for="comments<?php echo $index ?>" class="checkbox_label">Comments</label><br>
 				    	</div>
 
 				    	<div class="admin-checkbox">	
-				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[page-attributes]" value="yes" id="attributes<?php echo $index ?>" <?php if($cpt['page-attributes']){echo 'checked';} ?>/>
+				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[page-attributes]" value="true" id="attributes<?php echo $index ?>" <?php if($cpt['page-attributes']){echo 'checked';} ?>/>
 				    		<label for="attributes<?php echo $index ?>" class="checkbox_label">Attributes</label><br>
 				    	</div>
 		    		</div>
