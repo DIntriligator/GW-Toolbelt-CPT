@@ -46,22 +46,3 @@ function gwtb_cpt_init(){
 	include(dirname(__FILE__) . '/admin-cpt.php');
 }
 
-/*
-*  gwbt_enqueue_cpt_admin_scripts
-*
-*  Enqeues cpt scripts
-*
-*  @type    function
-*  @date    11/09/16
-*  @since   0.0.00
-*
-*  @param   $hook a unique hook for a page
-*  @return  N/A
-*/
-
-function gwbt_enqueue_cpt_admin_scripts($hook) {
-
-
-  wp_enqueue_script( 'admin_menu_scripts', plugin_dir_url(__FILE__) . '/scripts.js');
-}
-add_action( 'admin_enqueue_scripts', 'gwbt_enqueue_cpt_admin_scripts' );
