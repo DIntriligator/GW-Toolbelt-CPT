@@ -62,7 +62,7 @@ include(GWTB_PLUGIN_DIR . 'layout/header.php');
 				</div>
 				<div class="admin-card-body">
 					<div class="row">
-			    	<div class="six columns">
+			    	<div class="six columns text-center">
 
 			    		<div class="cpt_input">
 				    		<label for="name<?php echo $index ?>">Slug</label>
@@ -100,7 +100,7 @@ include(GWTB_PLUGIN_DIR . 'layout/header.php');
 			    		</div>
 					  </div>
 		
-					  <div class="six columns">
+					  <div class="six columns text-center">
 			    			<h6 style="margin:0; margin-top:20px;">Supports</h6>
 			    		<div class="admin-checkbox">
 				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[title]" value="yes" id="title<?php echo $index ?>" <?php if($cpt['title']){echo 'checked';} ?>/>
