@@ -85,8 +85,8 @@ function gwtb_cpt_update_admin_action(){
   foreach($cpts as $cpt){
   	$cpt_id = $cpt['id'];
 
-  	if($cpts[$cpt_id]['slug'] !== $response[$cpt_id]['slug']){
-			$cpts[$cpt_id]['slug'] = $response[$cpt_id]['slug'];
+  	if($cpts[$cpt_id]['slug'] !== strtolower($response[$cpt_id]['slug'])){
+			$cpts[$cpt_id]['slug'] = strtolower($response[$cpt_id]['slug']);
 		}
 		if($cpts[$cpt_id]['single'] !== $response[$cpt_id]['single']){
 			$cpts[$cpt_id]['single'] = $response[$cpt_id]['single'];
@@ -135,6 +135,19 @@ function gwtb_cpt_update_admin_action(){
   exit;
 
 }
+
+/*
+*  gwtb_cpt_delete_admin_action
+*
+*  Deletes Custom post types
+*
+*  @type    function
+*  @date    11/09/16
+*  @since   0.0.00
+*
+*  @param   N/A
+*  @return  N/A
+*/
 
 add_action( 'admin_action_gwtb_cpt_delete', 'gwtb_cpt_delete_admin_action' );
 
