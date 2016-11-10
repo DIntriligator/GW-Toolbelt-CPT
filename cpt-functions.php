@@ -37,17 +37,17 @@ function gwtb_cpt_add_button_admin_action(){
 		$cpts[$cpt_id]['plural'] = 'New CPTs';
 		$cpts[$cpt_id]['icon'] = 'dashicons-admin-post';
 
-		$cpts[$cpt_id]['public'] = true;
-		$cpts[$cpt_id]['hierarchial'] = true;
-		$cpts[$cpt_id]['archive'] = true;
+		$cpts[$cpt_id]['public'] = false;
+		$cpts[$cpt_id]['hierarchial'] = false;
+		$cpts[$cpt_id]['archive'] = false;
 
-		$cpts[$cpt_id]['title'] = true;
-		$cpts[$cpt_id]['editor'] = true;
-		$cpts[$cpt_id]['author'] = true;
-		$cpts[$cpt_id]['thumbnail'] = true;
-		$cpts[$cpt_id]['excerpt'] = true;
-		$cpts[$cpt_id]['comments'] = true;
-		$cpts[$cpt_id]['page-attributes'] = true;
+		$cpts[$cpt_id]['title'] = false;
+		$cpts[$cpt_id]['editor'] = false;
+		$cpts[$cpt_id]['author'] = false;
+		$cpts[$cpt_id]['thumbnail'] = false;
+		$cpts[$cpt_id]['excerpt'] = false;
+		$cpts[$cpt_id]['comments'] = false;
+		$cpts[$cpt_id]['page-attributes'] = false;
 
 	  //unset($cpts);
 
@@ -131,6 +131,27 @@ function gwtb_cpt_update_admin_action(){
   }
 
   update_option('gwtb-cpt', $cpts);
+	wp_redirect(  admin_url( 'admin.php?page=gwtb-cpt') );
+  exit;
+
+}
+
+add_action( 'admin_action_gwtb_cpt_delete', 'gwtb_cpt_delete_admin_action' );
+
+function gwtb_cpt_delete_admin_action(){
+	if ( !current_user_can( 'manage_options' ) && wp_verify_nonce($retrieved_nonce))
+  {
+    wp_die( 'You are not allowed to be on this page.' );
+  }
+
+  $cpts = get_option('gwtb-cpt');
+
+  $delete_id = $_POST['id'];
+
+  unset($cpts[$delete_id]);
+
+
+ update_option('gwtb-cpt', $cpts);
 	wp_redirect(  admin_url( 'admin.php?page=gwtb-cpt') );
   exit;
 

@@ -23,7 +23,7 @@ include(GWTB_PLUGIN_DIR . 'layout/header.php');
 		<div class="row text-center">
 			<div class="twelve columns">
 				<form name="cpt-add-button" method="post" action="<?php echo admin_url( 'admin.php' ); ?>">
-					<input type="hidden" name="action" value="gwtb_cpt_add_button" />
+					<input type="hidden" name="action" value="gwtb_cpt_delete" />
 					<?php wp_nonce_field()?>
 					<input type="submit" name="Submit" class="button-black" value="Delete CPT with the ID of:" />
 					<select name="id" class="buttons button-black">
@@ -81,15 +81,9 @@ include(GWTB_PLUGIN_DIR . 'layout/header.php');
 
 			    		<div class="cpt_input">
 				    		<label for="dashicon<?php echo $index ?>">Dashicon</label>
-				    		<input type="hidden" name="<?php echo $cpt['id'] ?>[icon]" id="dashicon<?php echo $index ?>" value="<?php echo $cpt['icon'] ?>" />
-				    		<span id="dashicon-display<?php echo $index ?>" class="dashicons <?php echo $cpt['icon'] ?>"></span><br><br>
-				    		<a href="#" class="buttons button-brand" data-index="<?php echo $index ?>">Pick an Icon</a>
-				    		<?php gwtb_dashicons($index) ?>
+				    		<input type="text" name="<?php echo $cpt['id'] ?>[icon]" id="dashicon<?php echo $index ?>" value="<?php echo $cpt['icon'] ?>" />
 			    		</div>
 
-					  </div>
-		
-					  <div class="six columns">
 			    		<div class="admin-checkbox">
 				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[public]" id="public<?php echo $index ?>" value="true" <?php if($cpt['public']){echo 'checked';} ?> />
 				    		<label for="public<?php echo $index ?>"  class="checkbox_label" >Public?</label>
@@ -104,7 +98,9 @@ include(GWTB_PLUGIN_DIR . 'layout/header.php');
 				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[hierarchial]" id="hierarchial<?php echo $index ?>" value="yes" <?php if($cpt['hierarchial']){echo 'checked';} ?> />
 				    		<label for="hierarchial<?php echo $index ?>"  class="checkbox_label">Is Hierarchial?</label>
 			    		</div>
-
+					  </div>
+		
+					  <div class="six columns">
 			    			<h6 style="margin:0; margin-top:20px;">Supports</h6>
 			    		<div class="admin-checkbox">
 				    		<input type="checkbox" name="<?php echo $cpt['id'] ?>[title]" value="yes" id="title<?php echo $index ?>" <?php if($cpt['title']){echo 'checked';} ?>/>
@@ -155,4 +151,6 @@ include(GWTB_PLUGIN_DIR . 'layout/header.php');
 	</form>
 </div>
 
-<?php $cpts = get_option('gwtb-cpt'); var_dump($cpts); ?>
+<?php  
+include(GWTB_PLUGIN_DIR . 'layout/footer.php');
+?>
