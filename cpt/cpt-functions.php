@@ -169,3 +169,25 @@ function gwtb_cpt_delete_admin_action(){
   exit;
 
 }
+function gwtb_admin_cpt_menu(){
+	$menu = add_submenu_page( 'gwtoolbelt', 'Custom Post Types', 'Custom Post Types', 'manage_options', 'gwtb-cpt', 'gwtb_cpt_init' );
+}
+add_action( 'admin_menu', 'gwtb_admin_cpt_menu', 3 );
+
+/*
+*  gwtb_admin_cpt_menu
+*
+*  This function adds a page layout for the gwtb_admin_cpt_menu function
+*
+*  @type    function
+*  @date    11/09/16
+*  @since   0.0.00
+*
+*  @param   N/A
+*  @return  N/A
+*/
+
+function gwtb_cpt_init(){
+	include(dirname(__FILE__) . '/cpt-view.php');
+}
+
