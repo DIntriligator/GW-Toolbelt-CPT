@@ -12,12 +12,12 @@ include(GWTB_PLUGIN_DIR . 'layout/header.php');
 					<?php $css = get_option('gwtb-css') ?>
 					<input type="hidden" name="action" value="gwtb_cpt_css" />
 					<?php wp_nonce_field()?>
+					<input type="submit" class="button-brand" value="Add Css">
 					<textarea class="custom-css" name="custom-css-field"><?php echo $css ?></textarea>
 					<input type="submit" class="button-brand" value="Add Css">
 				</form>
 			</div>
 		</div>
-</div>
 </div>
 
 <?php  
