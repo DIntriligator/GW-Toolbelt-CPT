@@ -43,6 +43,6 @@ add_action( 'admin_menu', 'gwtb_admin_cpt_menu', 3 );
 */
 
 function gwtb_cpt_init(){
-	include(dirname(__FILE__) . '/admin-cpt.php');
+	include(dirname(__FILE__) . 'cpt/admin-cpt.php');
 }
 
