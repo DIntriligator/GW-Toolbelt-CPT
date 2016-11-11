@@ -1,6 +1,6 @@
 <?php 
 $title = "CUSTOM POST TYPES"; 
-include(GWTB_PLUGIN_DIR . 'layout/header.php');
+include(GWTB_PLUGIN_DIR . 'views/header.php');
 ?>
 
 <!-- New CPT form -->
@@ -152,5 +152,5 @@ include(GWTB_PLUGIN_DIR . 'layout/header.php');
 </div>
 
 <?php  
-include(GWTB_PLUGIN_DIR . 'layout/footer.php');
+include(GWTB_PLUGIN_DIR . 'views/footer.php');
 ?>
